@@ -1,6 +1,10 @@
 import BookCard from '@/components/BookCard';
+import { books } from '@/lib/data';
 
 export default function BooksPage() {
+    const availableBooks = books.filter(book => !book.isComingSoon);
+    const comingSoonBooks = books.filter(book => book.isComingSoon);
+
     return (
         <div className="bg-[#Fdfbf7] min-h-screen py-20">
             <div className="container-width">
@@ -14,47 +18,32 @@ export default function BooksPage() {
                 <section className="mb-20">
                     <h2 className="text-2xl font-bold mb-8 border-b pb-4 text-[#1A1A1A]">Available Field Guides</h2>
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        <BookCard
-                            title="Survival Planting 101"
-                            subtitle="High-Calorie Crops for Crisis"
-                            imageSrc="/images/book_survival_planting_101.png"
-                            slug="survival-planting-101"
-                            amazonUrl="https://amazon.com/dp/placeholder1"
-                        />
-                        <BookCard
-                            title="Survival Vertical Gardening"
-                            subtitle="Maximize Yield in Minimal Space"
-                            imageSrc="/images/book_vertical_gardening.png"
-                            slug="survival-vertical-gardening"
-                            amazonUrl="https://amazon.com/dp/placeholder2"
-                        />
+                        {availableBooks.map((book) => (
+                            <BookCard
+                                key={book.slug}
+                                title={book.title}
+                                subtitle={book.subtitle}
+                                imageSrc={book.imageSrc}
+                                slug={book.slug}
+                                amazonUrl={book.amazonUrl}
+                            />
+                        ))}
                     </div>
                 </section>
 
                 <section>
                     <h2 className="text-2xl font-bold mb-8 border-b pb-4 text-[#1A1A1A] opacity-70">In Development</h2>
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 opacity-80">
-                        <BookCard
-                            title="Survival Seed Saving"
-                            subtitle="Genetic Independence & Heirloom Security"
-                            imageSrc=""
-                            slug="seed-saving"
-                            isComingSoon
-                        />
-                        <BookCard
-                            title="Off-Grid Water & Soil"
-                            subtitle="Fertility & Hydration Without Infrastructure"
-                            imageSrc=""
-                            slug="water-soil"
-                            isComingSoon
-                        />
-                        <BookCard
-                            title="Urban Survival Food Systems"
-                            subtitle="Stealth Growing for City Dwellers"
-                            imageSrc=""
-                            slug="urban-systems"
-                            isComingSoon
-                        />
+                        {comingSoonBooks.map((book) => (
+                            <BookCard
+                                key={book.slug}
+                                title={book.title}
+                                subtitle={book.subtitle}
+                                imageSrc={book.imageSrc}
+                                slug={book.slug}
+                                isComingSoon
+                            />
+                        ))}
                     </div>
                 </section>
             </div>

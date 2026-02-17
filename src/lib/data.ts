@@ -17,7 +17,7 @@ export const books: Book[] = [
         title: 'Survival Planting 101',
         subtitle: 'High-Calorie Crops for Crisis',
         description: 'Stop growing salad. Start growing calories. This guide teaches you the exact crops needed to sustain a family when the grocery store closes.',
-        imageSrc: '/images/book_survival_planting_101_v2.png',
+        imageSrc: '/images/book_survival_planting_101_v2.png?v=2',
         amazonUrl: 'https://a.co/d/097HcIZL',
         bullets: [
             'The 5 crops that provide 80% of required calories',
@@ -41,7 +41,7 @@ export const books: Book[] = [
         title: 'Survival Vertical Gardening',
         subtitle: 'Maximize Yield in Minimal Space',
         description: 'Urban survival requires density. Learn to grow 3x the food in the same footprint by going up, not out.',
-        imageSrc: '/images/book_vertical_gardening_v2.png',
+        imageSrc: '/images/book_vertical_gardening_v2.png?v=2',
         amazonUrl: 'https://a.co/d/0b9z0wcz',
         bullets: [
             'Trellising systems for beans, squash, and tomatoes',
