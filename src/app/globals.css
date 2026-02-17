@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+:root {
+  /* Tactical Palette */
+  --bg-primary: #FDFBF7; /* Off-white / Bone */
+  --bg-secondary: #F3F1ED; /* Slightly darker off-white for cards/sections */
+  --fg-primary: #1A1A1A; /* Charcoal / Black */
+  --fg-secondary: #4A4A4A; /* Dark Grey */
+  --brand-green: #3F5234; /* Tactical Olive Green */
+  --brand-green-dark: #2F3E26; /* Darker Olive */
+  --brand-green-light: #5A734B; /* Lighter Olive for hover */
+  --accent-alert: #D9534F; /* Urgent Red (minimal use) */
+  --border-color: #E5E5E5;
+
+  /* Font Setup */
+  --font-sans: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-serif: "Merriweather", "Georgia", serif; /* For book titles/headers optional */
+}
+
+@theme inline {
+  --color-background: var(--bg-primary);
+  --color-foreground: var(--fg-primary);
+  --color-primary: var(--brand-green);
+  --color-primary-dark: var(--brand-green-dark);
+  --color-primary-light: var(--brand-green-light);
+  --color-secondary: var(--bg-secondary);
+  --color-text-secondary: var(--fg-secondary);
+  --color-border: var(--border-color);
+  
+  --font-sans: var(--font-sans);
+  --font-serif: var(--font-serif);
+}
+
+/* Reset basics */
+body {
+  background-color: var(--bg-primary);
+  color: var(--fg-primary);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 1.1;
+  color: var(--fg-primary);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+/* Utilities */
+.container-width {
+  @apply max-w-6xl mx-auto px-6 md:px-8;
+}
+
+.tactical-card {
+  @apply bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200;
+}
+
+.btn-primary {
+  @apply inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-[var(--brand-green)] hover:bg-[var(--brand-green-light)] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[var(--brand-green)];
+}
+
+.btn-secondary {
+  @apply inline-flex items-center justify-center px-6 py-3 border border-gray-300 shadow-sm text-base font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[var(--brand-green)];
+}
+
+.input-field {
+  @apply block w-full rounded-md border-gray-300 shadow-sm focus:border-[var(--brand-green)] focus:ring-[var(--brand-green)] sm:text-sm px-4 py-3 bg-white;
+}
