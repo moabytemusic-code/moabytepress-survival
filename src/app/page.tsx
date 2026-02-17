@@ -31,7 +31,7 @@ export default function Home() {
 
         <div className="relative z-20 container-width py-24 md:py-40 grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-8">
-            <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold tracking-tight leading-tight text-white drop-shadow-md">
+            <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold tracking-tight leading-tight !text-white drop-shadow-md">
               Build Food Independence <br />
               <span className="text-[#B4D6A2]">Before You Need It</span>
             </h1>
