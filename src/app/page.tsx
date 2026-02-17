@@ -31,15 +31,15 @@ export default function Home() {
 
         <div className="relative z-20 container-width py-24 md:py-40 grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-8">
-            <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold tracking-tight leading-tight">
+            <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold tracking-tight leading-tight text-white drop-shadow-md">
               Build Food Independence <br />
               <span className="text-[#B4D6A2]">Before You Need It</span>
             </h1>
-            <p className="text-lg md:text-2xl text-gray-200 max-w-lg leading-relaxed">
+            <p className="text-lg md:text-2xl text-gray-100 max-w-lg leading-relaxed drop-shadow-sm">
               Practical survival food systems for small spaces, uncertain times, and real-world resilience.
             </p>
             <div className="flex flex-col sm:flex-row gap-5 pt-4">
-              <Link href="/free" className="btn-primary text-lg px-8 py-4 bg-[#6B8E5A] hover:bg-[#7DA36C]">
+              <Link href="/free" className="btn-primary text-lg px-8 py-4 bg-[#6B8E5A] hover:bg-[#7DA36C] text-white">
                 Get the Free 30-Day Blueprint
               </Link>
               <Link href="/books" className="btn-secondary bg-white/10 text-white border-white/20 backdrop-blur-sm hover:bg-white/20 hover:text-white">
@@ -52,7 +52,7 @@ export default function Home() {
                   <div key={i} className="w-8 h-8 rounded-full border-2 border-[#242B1F] bg-gray-400" />
                 ))}
               </div>
-              <p className="text-sm text-gray-400 font-medium">
+              <p className="text-sm text-gray-300 font-medium">
                 Joined by 12,000+ Practical Preppers
               </p>
             </div>
