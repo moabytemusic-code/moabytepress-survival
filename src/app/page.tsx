@@ -5,10 +5,14 @@ import BookCard from '@/components/BookCard';
 import PillarCard from '@/components/PillarCard';
 import CTAForm from '@/components/CTAForm';
 import { getSortedPostsData } from '@/lib/blog'; // Import blog data
+import { getBook } from '@/lib/data'; // Import book data getter
 
 export default function Home() {
   // Get latest 3 posts for preview section
   const latestPosts = getSortedPostsData().slice(0, 3);
+
+  const plantingBook = getBook('survival-planting-101');
+  const verticalBook = getBook('survival-vertical-gardening');
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -128,47 +132,39 @@ export default function Home() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            import {getBook} from '@/lib/data'; // Import book data getter
-
-            // ... inside the component
-            const plantingBook = getBook('survival-planting-101');
-            const verticalBook = getBook('survival-vertical-gardening');
-
-            // ... inside the render return
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {plantingBook && (
-                <BookCard
-                  title={plantingBook.title}
-                  subtitle={plantingBook.subtitle}
-                  imageSrc={plantingBook.imageSrc}
-                  slug={plantingBook.slug}
-                  amazonUrl={plantingBook.amazonUrl}
-                />
-              )}
-              {verticalBook && (
-                <BookCard
-                  title={verticalBook.title}
-                  subtitle={verticalBook.subtitle}
-                  imageSrc={verticalBook.imageSrc}
-                  slug={verticalBook.slug}
-                  amazonUrl={verticalBook.amazonUrl}
-                />
-              )}
-              {/* Third slot for balance, showing development */}
-              <div className="hidden lg:block bg-gray-50 rounded-xl border border-dashed border-gray-300 p-8 flex flex-col items-center justify-center text-center">
-                <h3 className="text-lg font-semibold text-gray-400 mb-2">More Field Guides Coming</h3>
-                <p className="text-sm text-gray-500 mb-6">Seeds, Water, and Preservation systems in development.</p>
-                <Link href="/free" className="text-[#3F5234] text-sm font-medium hover:underline">
-                  Join the list to be notified
-                </Link>
-              </div>
-            </div>
-            <div className="mt-8 md:hidden text-center">
-              <Link href="/books" className="text-[#3F5234] font-medium inline-flex items-center">
-                View all books <ChevronRight className="ml-1 w-4 h-4" />
+            {plantingBook && (
+              <BookCard
+                title={plantingBook.title}
+                subtitle={plantingBook.subtitle}
+                imageSrc={plantingBook.imageSrc}
+                slug={plantingBook.slug}
+                amazonUrl={plantingBook.amazonUrl}
+              />
+            )}
+            {verticalBook && (
+              <BookCard
+                title={verticalBook.title}
+                subtitle={verticalBook.subtitle}
+                imageSrc={verticalBook.imageSrc}
+                slug={verticalBook.slug}
+                amazonUrl={verticalBook.amazonUrl}
+              />
+            )}
+            {/* Third slot for balance, showing development */}
+            <div className="hidden lg:block bg-gray-50 rounded-xl border border-dashed border-gray-300 p-8 flex flex-col items-center justify-center text-center">
+              <h3 className="text-lg font-semibold text-gray-400 mb-2">More Field Guides Coming</h3>
+              <p className="text-sm text-gray-500 mb-6">Seeds, Water, and Preservation systems in development.</p>
+              <Link href="/free" className="text-[#3F5234] text-sm font-medium hover:underline">
+                Join the list to be notified
               </Link>
             </div>
           </div>
+          <div className="mt-8 md:hidden text-center">
+            <Link href="/books" className="text-[#3F5234] font-medium inline-flex items-center">
+              View all books <ChevronRight className="ml-1 w-4 h-4" />
+            </Link>
+          </div>
+        </div>
       </section>
 
       {/* 5. BLOG PREVIEW (Latest 3) */}
