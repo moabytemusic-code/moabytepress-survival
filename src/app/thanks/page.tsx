@@ -1,5 +1,5 @@
 export default function ThanksPage() {
-    const downloadUrl = process.env.LEADMAGNET_DOWNLOAD_URL || '#';
+    const downloadUrl = process.env.LEADMAGNET_DOWNLOAD_URL || '/documents/survival-food-blueprint.pdf';
 
     return (
         <div className="bg-[#Fdfbf7] min-h-screen py-32 flex flex-col items-center justify-center text-center">
