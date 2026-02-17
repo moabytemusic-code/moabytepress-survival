@@ -19,7 +19,7 @@ export default function Header() {
         </nav>
 
         <div className="flex items-center gap-4">
-          <Link href="/free" className="hidden lg:inline-flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-[#3F5234] hover:bg-[#2F3E26] shadow-sm transition-all">
+          <Link href="/free" className="hidden lg:inline-flex items-center justify-center px-4 py-2 border border-transparent text-sm font-bold rounded-md text-[#1A1A1A] bg-[#98B886] hover:bg-[#86a675] shadow-sm transition-all">
             Get the Blueprint
           </Link>
           {/* Mobile menu toggle would go here */}
