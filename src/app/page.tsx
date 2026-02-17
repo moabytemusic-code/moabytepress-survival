@@ -128,35 +128,47 @@ export default function Home() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <BookCard
-              title="Survival Planting 101"
-              subtitle="High-Calorie Crops for Crisis"
-              imageSrc="/images/book_survival_planting_101.png"
-              slug="survival-planting-101"
-              amazonUrl="https://amazon.com"
-            />
-            <BookCard
-              title="Survival Vertical Gardening"
-              subtitle="Maximize Yield in Minimal Space"
-              imageSrc="/images/book_vertical_gardening.png"
-              slug="survival-vertical-gardening"
-              amazonUrl="https://amazon.com"
-            />
-            {/* Third slot for balance, showing development */}
-            <div className="hidden lg:block bg-gray-50 rounded-xl border border-dashed border-gray-300 p-8 flex flex-col items-center justify-center text-center">
-              <h3 className="text-lg font-semibold text-gray-400 mb-2">More Field Guides Coming</h3>
-              <p className="text-sm text-gray-500 mb-6">Seeds, Water, and Preservation systems in development.</p>
-              <Link href="/free" className="text-[#3F5234] text-sm font-medium hover:underline">
-                Join the list to be notified
+            import {getBook} from '@/lib/data'; // Import book data getter
+
+            // ... inside the component
+            const plantingBook = getBook('survival-planting-101');
+            const verticalBook = getBook('survival-vertical-gardening');
+
+            // ... inside the render return
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {plantingBook && (
+                <BookCard
+                  title={plantingBook.title}
+                  subtitle={plantingBook.subtitle}
+                  imageSrc={plantingBook.imageSrc}
+                  slug={plantingBook.slug}
+                  amazonUrl={plantingBook.amazonUrl}
+                />
+              )}
+              {verticalBook && (
+                <BookCard
+                  title={verticalBook.title}
+                  subtitle={verticalBook.subtitle}
+                  imageSrc={verticalBook.imageSrc}
+                  slug={verticalBook.slug}
+                  amazonUrl={verticalBook.amazonUrl}
+                />
+              )}
+              {/* Third slot for balance, showing development */}
+              <div className="hidden lg:block bg-gray-50 rounded-xl border border-dashed border-gray-300 p-8 flex flex-col items-center justify-center text-center">
+                <h3 className="text-lg font-semibold text-gray-400 mb-2">More Field Guides Coming</h3>
+                <p className="text-sm text-gray-500 mb-6">Seeds, Water, and Preservation systems in development.</p>
+                <Link href="/free" className="text-[#3F5234] text-sm font-medium hover:underline">
+                  Join the list to be notified
+                </Link>
+              </div>
+            </div>
+            <div className="mt-8 md:hidden text-center">
+              <Link href="/books" className="text-[#3F5234] font-medium inline-flex items-center">
+                View all books <ChevronRight className="ml-1 w-4 h-4" />
               </Link>
             </div>
           </div>
-          <div className="mt-8 md:hidden text-center">
-            <Link href="/books" className="text-[#3F5234] font-medium inline-flex items-center">
-              View all books <ChevronRight className="ml-1 w-4 h-4" />
-            </Link>
-          </div>
-        </div>
       </section>
 
       {/* 5. BLOG PREVIEW (Latest 3) */}
