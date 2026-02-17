@@ -35,7 +35,6 @@ export default function Footer() {
                     </p>
                     <p className="pt-4 border-t border-gray-300 flex justify-between">
                         <span>&copy; {new Date().getFullYear()} Moabyte Press. All rights reserved.</span>
-                        <span className="text-[10px] text-gray-400">v2.1 (Light Mode Fix)</span>
                     </p>
                 </div>
             </div>
