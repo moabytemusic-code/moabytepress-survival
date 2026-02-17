@@ -2,19 +2,27 @@
 
 :root {
   /* Tactical Palette */
-  --bg-primary: #FDFBF7; /* Off-white / Bone */
-  --bg-secondary: #F3F1ED; /* Slightly darker off-white for cards/sections */
-  --fg-primary: #1A1A1A; /* Charcoal / Black */
-  --fg-secondary: #4A4A4A; /* Dark Grey */
-  --brand-green: #3F5234; /* Tactical Olive Green */
-  --brand-green-dark: #2F3E26; /* Darker Olive */
-  --brand-green-light: #5A734B; /* Lighter Olive for hover */
-  --accent-alert: #D9534F; /* Urgent Red (minimal use) */
+  --bg-primary: #FDFBF7;
+  /* Off-white / Bone */
+  --bg-secondary: #F3F1ED;
+  /* Slightly darker off-white for cards/sections */
+  --fg-primary: #2D322A;
+  /* Deep Olive Grey (Warmer than Charcoal) */
+  --fg-secondary: #5C6353;
+  /* Medium Olive Grey */
+  --brand-green: #4A5D43;
+  /* More Vibrant Tactical Olive */
+  --brand-green-dark: #364532;
+  --brand-green-light: #6B8E5A;
+  /* Lighter growth green */
+  --accent-alert: #D9534F;
+  /* Urgent Red (minimal use) */
   --border-color: #E5E5E5;
 
   /* Font Setup */
   --font-sans: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  --font-serif: "Merriweather", "Georgia", serif; /* For book titles/headers optional */
+  --font-serif: "Merriweather", "Georgia", serif;
+  /* For book titles/headers optional */
 }
 
 @theme inline {
@@ -26,7 +34,7 @@
   --color-secondary: var(--bg-secondary);
   --color-text-secondary: var(--fg-secondary);
   --color-border: var(--border-color);
-  
+
   --font-sans: var(--font-sans);
   --font-serif: var(--font-serif);
 }
@@ -39,7 +47,12 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: 700;
   letter-spacing: -0.025em;
   line-height: 1.1;
