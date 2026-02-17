@@ -1,6 +1,9 @@
+'use client'; // Client component for onClick
+
 import Link from 'next/link';
 import Image from 'next/image';
 import { ArrowUpRight } from 'lucide-react';
+import { trackEvent } from '@/lib/analytics';
 
 interface BookCardProps {
     title: string;
@@ -19,6 +22,11 @@ export default function BookCard({
     amazonUrl,
     isComingSoon = false,
 }: BookCardProps) {
+
+    const handleAmazonClick = () => {
+        trackEvent({ event: 'amazon_click', label: slug });
+    };
+
     return (
         <div className="tactical-card flex flex-col h-full overflow-hidden group">
             <div className="relative aspect-[2/3] w-full bg-gray-100 overflow-hidden">
@@ -56,6 +64,7 @@ export default function BookCard({
                                     href={amazonUrl}
                                     target="_blank"
                                     rel="noopener noreferrer"
+                                    onClick={handleAmazonClick}
                                     className="w-full btn-primary flex items-center justify-center gap-2 text-sm py-2"
                                 >
                                     Buy on Amazon <ArrowUpRight className="h-4 w-4" />

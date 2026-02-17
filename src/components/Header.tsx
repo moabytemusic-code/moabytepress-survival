@@ -9,17 +9,18 @@ export default function Header() {
           <span className="text-[#3F5234]">MOABYTE</span> PRESS
           <span className="hidden sm:inline-block text-xs uppercase tracking-widest text-gray-500 ml-2">Survival</span>
         </Link>
-        
+
         <nav className="hidden md:flex gap-8 items-center text-sm font-medium text-gray-600">
           <Link href="/books" className="hover:text-[#3F5234] transition-colors">Books</Link>
-          <Link href="/systems" className="hover:text-[#3F5234] transition-colors">Systems</Link>
+          <Link href="/free" className="hover:text-[#3F5234] transition-colors">Free Blueprint</Link>
+          <Link href="/systems" className="hover:text-[#3F5234] transition-colors">Survival Systems</Link>
           <Link href="/blog" className="hover:text-[#3F5234] transition-colors">Blog</Link>
           <Link href="/about" className="hover:text-[#3F5234] transition-colors">About</Link>
         </nav>
 
         <div className="flex items-center gap-4">
-          <Link href="/free" className="hidden md:inline-flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-[#3F5234] hover:bg-[#2F3E26] shadow-sm transition-all">
-            Free Blueprint
+          <Link href="/free" className="hidden lg:inline-flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-[#3F5234] hover:bg-[#2F3E26] shadow-sm transition-all">
+            Get the Blueprint
           </Link>
           {/* Mobile menu toggle would go here */}
         </div>

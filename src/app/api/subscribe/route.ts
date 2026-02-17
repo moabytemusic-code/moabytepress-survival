@@ -9,7 +9,8 @@ export async function POST(req: NextRequest) {
         }
 
         const apiKey = process.env.BREVO_API_KEY;
-        const listId = process.env.BREVO_LIST_ID ? parseInt(process.env.BREVO_LIST_ID) : undefined;
+        // Default to List 64 per master prompt if not specified in ENV
+        const listId = process.env.BREVO_LIST_ID ? parseInt(process.env.BREVO_LIST_ID) : 64;
 
         if (!apiKey) {
             console.error('BREVO_API_KEY is missing');
@@ -24,7 +25,7 @@ export async function POST(req: NextRequest) {
                 SURVIVAL_INTEREST: true,
             },
             updateEnabled: true,
-            listIds: listId ? [listId] : undefined,
+            listIds: [listId],
         };
 
         const response = await fetch('https://api.brevo.com/v3/contacts', {

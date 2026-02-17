@@ -1,5 +1,5 @@
 ---
-title: "Off-Grid Watering: Low-Tech Methods That Work"
+title: "Off-Grid Watering Systems That Work"
 date: "2026-01-18"
 category: "off-grid-water"
 excerpt: "When the pumps stop, your garden dies—unless you have a plan. Explore gravity-fed, wicking, and swale hydration systems."
@@ -21,7 +21,7 @@ The roof of your house is a massive collector.
 An ancient technique. Bury an unglazed clay pot next to your plants. Fill it with water. The water seeps through the clay only as the soil dries out.
 - Zero evaporation loss.
 - Roots grow directly to the pot.
-- saves 50-70% of water compared to surface watering.
+- Saves 50-70% of water compared to surface watering.
 
 ### 3. Swales and Earthworks
 

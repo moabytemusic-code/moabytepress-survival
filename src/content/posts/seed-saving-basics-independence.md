@@ -1,8 +1,8 @@
 ---
-title: "Seed Saving Basics: The First Steps Toward Independence"
+title: "Seed Saving Basics for Independence"
 date: "2026-01-25"
 category: "seed-saving"
-excerpt: "If you buy seeds every year, you are not independent. Learn the critical difference between heirloom and hybrid, and how to start your own seed bank."
+excerpt: "If you buy seeds every year, you are not independent. Learn the difference between heirloom and hybrid, and how to bank your own supply."
 ---
 
 ## The Supply Chain Weakness
@@ -26,4 +26,4 @@ In 2020, seed companies ran out of stock. It happened fast. If you rely on a pac
 Cool, Dark, Dry.
 Moisture is the enemy. Use mason jars with silica gel packets in a cool closet or fridge.
 
-start your bank today. A single bean can produce 50 more. That is leverage.
+Start your bank today. A single bean can produce 50 more. That is leverage.

@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { ArrowRight, Loader2 } from 'lucide-react';
+import { trackEvent } from '@/lib/analytics'; // Analytics Added
 
 interface CTAFormProps {
     compact?: boolean;
@@ -33,6 +34,12 @@ export default function CTAForm({ compact = false, className = '', source = 'sur
 
             if (!res.ok) {
                 throw new Error(data.error || 'Something went wrong. Please try again.');
+            }
+
+            // Track conversion
+            // @ts-ignore - analytics utility is loose typed for now
+            if (typeof window !== 'undefined') {
+                trackEvent({ event: 'lead_optin', label: source });
             }
 
             router.push('/thanks');
