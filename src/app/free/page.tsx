@@ -6,8 +6,8 @@ export default function FreePage() {
             <div className="container-width max-w-4xl mx-auto">
                 <div className="text-center mb-16">
                     <span className="text-[#98B886] font-bold tracking-widest text-sm uppercase mb-2 block">Available for Immediate Download</span>
-                    <h1 className="text-4xl md:text-6xl font-extrabold mb-6 leading-tight">
-                        The 30-Day Survival Food <br /> <span className="text-white border-b-4 border-[#3F5234]">Starter Blueprint</span>
+                    <h1 className="text-4xl md:text-6xl font-extrabold mb-6 leading-tight text-white">
+                        The 30-Day Survival Food <br /> <span className="text-[#98B886] border-b-4 border-[#3F5234]">Starter Blueprint</span>
                     </h1>
                     <p className="text-xl text-gray-300 max-w-2xl mx-auto">
                         Stop guessing. Start growing calories. A tactical checklist to secure your food supply in one month.
