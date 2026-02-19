@@ -9,6 +9,8 @@ export interface Book {
     faq: { question: string; answer: string }[];
     pairsWithSlug?: string;
     isComingSoon?: boolean;
+    rssExplanation?: string;
+    showDiagram?: boolean;
 }
 
 export const books: Book[] = [
@@ -56,6 +58,33 @@ export const books: Book[] = [
             {
                 question: 'What materials do I need?',
                 answer: 'Simple hardware store items: PVC, cattle panels, and fabric pots.'
+            }
+        ],
+        pairsWithSlug: 'survival-planting-101'
+    },
+    {
+        slug: 'survival-seed-saving',
+        title: 'Survival Seed Saving',
+        subtitle: 'The Regenerative Seed System™',
+        description: 'Never buy seeds again. Learn the specific techniques for harvesting, processing, and storing seeds from your highest-producing crops to ensure long-term food security.',
+        imageSrc: '/images/book_seed_saving_placeholder.png',
+        amazonUrl: 'https://amazon.com/author/moabytepress', // Use a general author link if specific is unknown
+        rssExplanation: 'The Regenerative Seed System™ (RSS) is a closed-loop framework for maintaining genetic diversity and crop resilience. By selecting for local conditions year after year, you create a personalized "landrace" that outperforms generic store-bought seeds.',
+        showDiagram: true,
+        bullets: [
+            'Wet vs. Dry processing techniques for every major calorie crop',
+            'Storage protocols to maintain 90%+ germination for 5+ years',
+            'How to prevent cross-pollination in small gardens',
+            'Selecting for resilience: Which plants to save from first'
+        ],
+        faq: [
+            {
+                question: 'Don\'t seeds expire?',
+                answer: 'If stored incorrectly, yes. Using the RSS protocols, many seeds remain viable for 5-10 years, though we recommend a 3-year rotation.'
+            },
+            {
+                question: 'Can I save seeds from grocery store produce?',
+                answer: 'Rarely. Most grocery produce is hybrid (F1), which won\'t grow "true to seed." This book focuses on open-pollinated and heirloom varieties.'
             }
         ],
         pairsWithSlug: 'survival-planting-101'

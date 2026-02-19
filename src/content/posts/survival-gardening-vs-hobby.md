@@ -44,4 +44,4 @@ If you have limited space, dedicating 40% of it to kale is a tactical failure.
 
 Transition your garden from a hobby to a calorie factory today.
 
-[Get the High-Calorie Blueprint](/free) to see the exact varieties we recommend.
+[Learn more about the Regenerative Seed System™](/books/survival-seed-saving) or [Get the High-Calorie Blueprint](/free) to see the exact varieties we recommend.

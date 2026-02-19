@@ -13,6 +13,7 @@ export default function Home() {
 
   const plantingBook = getBook('survival-planting-101');
   const verticalBook = getBook('survival-vertical-gardening');
+  const seedSavingBook = getBook('survival-seed-saving');
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -167,14 +168,15 @@ export default function Home() {
                 amazonUrl={verticalBook.amazonUrl}
               />
             )}
-            {/* Third slot for balance, showing development */}
-            <div className="hidden lg:block bg-gray-50 rounded-xl border border-dashed border-gray-300 p-8 flex flex-col items-center justify-center text-center">
-              <h3 className="text-lg font-semibold text-gray-400 mb-2">More Field Guides Coming</h3>
-              <p className="text-sm text-gray-500 mb-6">Seeds, Water, and Preservation systems in development.</p>
-              <Link href="/free" className="text-[#3F5234] text-sm font-medium hover:underline">
-                Join the list to be notified
-              </Link>
-            </div>
+            {seedSavingBook && (
+              <BookCard
+                title={seedSavingBook.title}
+                subtitle={seedSavingBook.subtitle}
+                imageSrc={seedSavingBook.imageSrc}
+                slug={seedSavingBook.slug}
+                amazonUrl={seedSavingBook.amazonUrl}
+              />
+            )}
           </div>
           <div className="mt-8 md:hidden text-center">
             <Link href="/books" className="text-[#3F5234] font-medium inline-flex items-center">
@@ -182,10 +184,10 @@ export default function Home() {
             </Link>
           </div>
         </div>
-      </section>
+      </section >
 
       {/* 5. BLOG PREVIEW (Latest 3) */}
-      <section className="py-20 bg-white border-t border-gray-100">
+      < section className="py-20 bg-white border-t border-gray-100" >
         <div className="container-width">
           <h2 className="text-3xl font-bold text-[#1A1A1A] mb-12">Field Notes</h2>
           <div className="grid md:grid-cols-3 gap-8">
@@ -199,10 +201,10 @@ export default function Home() {
             ))}
           </div>
         </div>
-      </section>
+      </section >
 
       {/* 6. FINAL CTA */}
-      <section className="py-20 bg-[#Fdfbf7] text-center border-t border-gray-200">
+      < section className="py-20 bg-[#Fdfbf7] text-center border-t border-gray-200" >
         <div className="container-width max-w-2xl mx-auto">
           <h2 className="text-3xl font-bold text-[#1A1A1A] mb-6">Build resilience gradually.</h2>
           <p className="text-gray-600 mb-8 text-lg">
@@ -212,8 +214,8 @@ export default function Home() {
             Download the Free Blueprint
           </Link>
         </div>
-      </section>
+      </section >
 
-    </div>
+    </div >
   );
 }

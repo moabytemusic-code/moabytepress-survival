@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
-import { ArrowUpRight } from 'lucide-react';
+import { ArrowUpRight, Sprout } from 'lucide-react';
 import { getBook, books } from '@/lib/data';
 import BookCard from '@/components/BookCard';
 import CTAForm from '@/components/CTAForm';
@@ -75,6 +75,25 @@ export default async function BookPage({ params }: BookPageProps) {
                                         <p>{book.description}</p>
                                     </div>
 
+                                    {book.rssExplanation && (
+                                        <div className="bg-[#B4D6A2]/10 border-l-4 border-[#3F5234] p-4 mb-6 rounded-r-lg">
+                                            <h4 className="text-sm font-bold uppercase tracking-wider text-[#3F5234] mb-1">Regenerative Seed System™</h4>
+                                            <p className="text-sm text-gray-700 italic">{book.rssExplanation}</p>
+                                        </div>
+                                    )}
+
+                                    {book.showDiagram && (
+                                        <div className="bg-gray-50 border border-dashed border-gray-300 rounded-xl p-8 mb-8 flex flex-col items-center justify-center text-center">
+                                            <div className="w-16 h-16 bg-[#B4D6A2]/20 rounded-full flex items-center justify-center mb-4">
+                                                <Sprout className="w-8 h-8 text-[#3F5234]" />
+                                            </div>
+                                            <h4 className="font-bold text-gray-900 mb-2">The RSS Cycle Diagram</h4>
+                                            <p className="text-sm text-gray-500 max-w-xs">
+                                                Visualizing the closed-loop system of selection, harvest, and storage.
+                                            </p>
+                                        </div>
+                                    )}
+
                                     <a href={book.amazonUrl} target="_blank" rel="noopener noreferrer" className="btn-primary inline-flex items-center w-full md:w-auto mb-4">
                                         Buy on Amazon <ArrowUpRight className="ml-2 w-4 h-4" />
                                     </a>
@@ -140,6 +159,23 @@ export default async function BookPage({ params }: BookPageProps) {
 
                     </div>
 
+                </div>
+
+                {/* Related Titles Section */}
+                <div className="mt-20 pt-20 border-t border-gray-100">
+                    <h2 className="text-2xl font-bold mb-8 text-[#1A1A1A]">Related Field Guides</h2>
+                    <div className="grid md:grid-cols-3 gap-8">
+                        {books.filter(b => b.slug !== slug).map((otherBook) => (
+                            <BookCard
+                                key={otherBook.slug}
+                                title={otherBook.title}
+                                subtitle={otherBook.subtitle}
+                                imageSrc={otherBook.imageSrc}
+                                slug={otherBook.slug}
+                                amazonUrl={otherBook.amazonUrl}
+                            />
+                        ))}
+                    </div>
                 </div>
             </div>
         </div>

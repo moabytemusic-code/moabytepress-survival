@@ -29,4 +29,4 @@ Here is a simplified 90-day execution plan.
 - **Week 11:** First Harvests (radishes, greens). Morale boost.
 - **Week 12:** Plan the Fall Garden. Resilience is a cycle.
 
-**Action Item:** Download our [30-Day Starter Blueprint](/free) for the detailed Week 1-4 checklist.
+**Action Item:** Download our [30-Day Starter Blueprint](/free) for the detailed Week 1-4 checklist. Once your production is stable, ensure your long-term independence with the [Regenerative Seed System™](/books/survival-seed-saving).

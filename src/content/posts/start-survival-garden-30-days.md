@@ -30,4 +30,4 @@ Most people procrastinate because they think they need a "perfect" plan. In a su
 - **Pest Patrol:** Start your daily walk. Look for beetle eggs under leaves.
 - **Log It:** Start a notebook. Record what you planted and where.
 
-**Next Step:** Download the [Free Blueprint](/free) for the detailed daily checklist.
+**Next Step:** Download the [Free Blueprint](/free) for the detailed daily checklist, or start building your long-term resilience with our [Regenerative Seed System™ guide](/books/survival-seed-saving).

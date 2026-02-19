@@ -27,3 +27,5 @@ Cool, Dark, Dry.
 Moisture is the enemy. Use mason jars with silica gel packets in a cool closet or fridge.
 
 Start your bank today. A single bean can produce 50 more. That is leverage.
+
+**Action Item:** For a deep dive into advanced techniques like wet processing and long-term storage viability, see our field guide: [Survival Seed Saving: The Regenerative Seed System™](/books/survival-seed-saving).
